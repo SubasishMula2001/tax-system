@@ -1,0 +1,49 @@
+{
+  "name": "tax-system-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src",
+    "test": "jest --verbose src/e2e"
+  },
+  "author": "Subasish Mula",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^10.0.0",
+    "mongodb": "^5.7.0",
+    "mongoose": "^6.3.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.0.0",
+    "randexp": "^0.5.3",
+    "request-promise": "^4.2.6",
+    "should-http": "^0.1.1",
+    "sinon": "^13.0.2",
+    "supertest": "^6.2.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nock": "^13.2.4",
+    "nodemon": "^2.0.15",
+    "request": "^2.88.2"
+  }
+}

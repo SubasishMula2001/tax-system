@@ -1,0 +1,9 @@
+const payerToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6IjYyNzExZmE5MmYwNzI5ZTk0YTk5Y2RlOCIsInVzZXJuYW1lIjoiZHViZXkxMjMiLCJyb2xlIjoiUGF5ZXIifSwiaWF0IjoxNjUxNzQ1MTQ5fQ.3PFTx_GntKc8DduSl1ASaPPbrLw37wmUB-bvsss60Cg'
+
+const accToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6IjYyNzE4NWFkMTgyMzJiZjA0YzhlZjZmOCIsInVzZXJuYW1lIjoidGVzdDEyNCIsInJvbGUiOiJBY2NvdW50YW50In0sImlhdCI6MTY1MTc0NTA5NH0.OztQ29o4Tz5HoIH76e1WLkc-QEJ2-KToZz9Y7zuuj0U'
+
+const panId = 'GWTPD5567N'
+const otherPanId = 'GWTPD4909N'
+
+//payerToken and panId are for the same user
+module.exports = {payerToken, accToken, panId, otherPanId}
