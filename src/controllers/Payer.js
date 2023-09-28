@@ -17,22 +17,3 @@ exports.getPayerInfo = async (req, res, next) => {
         })
     }
 }
-
-//GET @api/v1/info/allPayers
-exports.getAllPayers = async (req, res, next) => {
-    const accId = req.user.userId
-    const accountant = await Accountant.findOne({userId : accId})
-    const payers = await Payer.find({userId: {$in : accountant.payerIds} });
-    if(payers.length){
-        return res.status(200).json({
-            success: true,
-            data: payers
-        })
-    } else {
-        return res.status(200).json({
-            success: true,
-            msg: 'Payers not found'
-        })
-    }
-}
-

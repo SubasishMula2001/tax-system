@@ -9,7 +9,7 @@ router.get('/', async (req, res, next) => {
     console.log(checkObj);
     console.log(amt);
     res.send({
-        msg: "use /api/v1/{resource} where resource can be market, cmdty, report"
+        msg: "use /api/v1/ where resource can be market, cmdty, report"
     })
 })
 module.exports = router;
