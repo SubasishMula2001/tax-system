@@ -8,14 +8,13 @@ const session = require('express-session')
 
 require('dotenv').config({});
 const connectDB = require('./config/db');
-
 const passport = require('passport');
+const routes = require('./routes')
+const app = express();
 
 require('./auth/auth');
-//routers
-const routes = require('./routes')
 
-const app = express();
+
 app.use(
   bodyParser.urlencoded({
     extended: false
