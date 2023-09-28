@@ -18,9 +18,6 @@ function canViewResource(user, resource) {
   return (user.role === 'Accountant' || user.role === 'Admin' || resource.userId === user.userId)
 }
 
-// function authResource(req, res,next){
-
-// }
 
 //auth strategy
 passport.use(

@@ -53,6 +53,7 @@ exports.loginUser = async (req, res, next) => {
             password: req.body.password
         });
         console.log('inside login funciton', user)
+        // console.log(token);
         req.login(user, (err) => {
             if (err) {
                 console.log('login err' + err);

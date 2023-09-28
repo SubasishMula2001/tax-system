@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require("mongoose");
 const helmet = require('helmet');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 
 
 
@@ -13,8 +13,7 @@ const session = require('express-session')
 require('dotenv').config({});
 const connectDB = require('./config/db');
 
-// const connectDB = require('./config/dbConn');
-const passport = require('passport')
+const passport = require('passport');
 
 require('./auth/auth');
 //routers
@@ -31,7 +30,7 @@ app.use(bodyParser.json());
 
 app.use(helmet());
 app.use(cors());
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 app.use(passport.initialize())
 app.use(session({
   secret: 'testSecret',
@@ -40,12 +39,13 @@ app.use(session({
 }));
 app.use(passport.session());
 connectDB();
-app.use(cors())
+// app.use(cors())
 
 
 const path = '/api/v1'
 app.use('/', routes.check);
 app.use(path+'/auth',routes.auth);
+
 //below routes are private
 app.use(path+'/tax', passport.authenticate('jwt', { session: false }),routes.newTax);
 app.use(path+'/payer', passport.authenticate('jwt', { session: false }),routes.payTax);
@@ -57,6 +57,7 @@ const port = 3000;
 if (process.env.NODE_ENV !== 'test'){
   app.listen(port, () => {
     console.log(`listening on port ${port}`);
+  
   });
 }
 

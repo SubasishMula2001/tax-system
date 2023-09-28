@@ -29,7 +29,7 @@ async function createTaxDue(accountantId, taxObj) {
 
 //@ POST api/v1/tax
 // acess to accountant
-newTaxDue = async (req, res, next) => {
+let newTaxDue = async (req, res, next) => {
     try {
         const taxDue = await createTaxDue(req.user.userId, req.body)
         if (taxDue) {
