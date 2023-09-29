@@ -38,8 +38,9 @@ connectDB();
 
 
 const path = '/api/v1'
-app.get("/",()=>{
+app.get("/",(req,res)=>{
   console.log("Home");
+  res.end();
 })
 app.use(path+'/auth',routes.auth);
 
