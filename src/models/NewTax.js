@@ -30,10 +30,10 @@ const NewTaxSchema = new mongoose.Schema({
     },
     panId: {
         type: String
-    },
-    accountantId: {
-        type: String
-    }
+     }//,
+    // accountantId: {
+    //     type: String
+    // }
 })
 
 

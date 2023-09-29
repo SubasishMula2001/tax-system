@@ -38,7 +38,9 @@ connectDB();
 
 
 const path = '/api/v1'
-app.use('/', routes.check);
+app.get("/",()=>{
+  console.log("Home");
+})
 app.use(path+'/auth',routes.auth);
 
 //below routes are private
